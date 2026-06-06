@@ -1,0 +1,47 @@
+# MkDocs Material 설정 (옵션 B 배포용)
+# 사용법:  pip install mkdocs-material  →  mkdocs serve  →  mkdocs gh-deploy
+site_name: 수학 학습 위키 (중3)
+site_description: 매일 푸는 수학 문제와 풀이를 기록하고 LLM 분석을 축적하는 개인 학습 위키
+theme:
+  name: material
+  language: ko
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: 다크 모드로
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 라이트 모드로
+
+docs_dir: content
+
+nav:
+  - 홈: index.md
+  - 일일 기록: daily/README.md
+  - 오답 분석: mistakes/README.md
+  - 개념 노트: concepts/README.md
+  - 시험 대비: exams/README.md
+  - 대시보드:
+      - 약점 지도: dashboard/weakness-map.md
+      - 주간 리뷰: dashboard/weekly-review.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search:
+      lang: ko

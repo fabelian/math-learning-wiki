@@ -1,0 +1,18 @@
+# MkDocs 빌드 산출물
+/site/
+
+# OS / 편집기
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/
+
+# Python (mkdocs 가상환경)
+.venv/
+venv/
+__pycache__/
+
+# 이미지 원본 백업 (선택: 큰 원본은 추적 제외하고 축소본만 커밋)
+# images/**/_raw/
