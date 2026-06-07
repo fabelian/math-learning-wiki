@@ -1,46 +1,49 @@
 # ⚙️ 스크립트 (Scripts)
 
-반복 작업을 자동화하는 (선택적) 스크립트 모음입니다. 지금은 비어 있으며, 필요할 때 추가합니다.
+반복 작업 자동화용(선택). 핵심 컴파일은 LLM이 하므로, 스크립트는 보조 역할입니다.
 
 ---
 
-## 🧰 추천 자동화 아이디어
+## 🧰 추천 자동화
 
 | 스크립트 | 하는 일 | 우선순위 |
 |----------|---------|----------|
-| `new-daily.ps1` | 오늘 날짜로 daily 템플릿을 복사해 새 문서 생성 | ⭐⭐⭐ |
-| `resize-images.ps1` | `images/`의 큰 사진을 1600px로 일괄 축소 | ⭐⭐ |
-| `update-index.ps1` | daily/mistakes 인덱스 표 자동 갱신 | ⭐⭐ |
-| `count-tags.ps1` | 오답 태그 빈도 집계 → 약점 지도 분포표 업데이트 | ⭐⭐⭐ |
+| `resize-images.ps1` | `sources/`의 큰 사진을 1600px로 축소 + EXIF 제거 | ⭐⭐⭐ |
+| `new-source.ps1` | 오늘 날짜 source-id 폴더/자리 만들기 | ⭐⭐ |
+| `check-links.ps1` | wiki 내부 상대링크 깨짐 점검 (lint 보조) | ⭐⭐ |
+
+> 집계·교차참조·정합성 점검은 스크립트 대신 [compile](../prompts/compile.md)/[lint](../prompts/lint.md) LLM 워크플로가 담당합니다.
 
 ---
 
-## 📝 예시: 오늘 날짜로 일일 기록 만들기 (PowerShell)
-
-> 아래는 참고용 예시입니다. 실제로 쓰려면 `new-daily.ps1`로 저장하세요.
+## 📝 예시: source 자리 만들기 (PowerShell)
 
 ```powershell
-# new-daily.ps1
+# new-source.ps1
 $date = Get-Date -Format "yyyy-MM-dd"
-$template = "content/templates/daily-problem-template.md"
-$target = "content/daily/$date.md"
-
-if (Test-Path $target) {
-    Write-Host "이미 존재합니다: $target"
-} else {
-    (Get-Content $template -Raw) -replace "YYYY-MM-DD", $date |
-        Set-Content $target -Encoding utf8
-    Write-Host "생성됨: $target"
-}
+$dir = "sources/$((Get-Date -Format 'yyyy/MM'))"
+New-Item -ItemType Directory -Force $dir | Out-Null
+Write-Host "오늘 원본 폴더: $dir"
+Write-Host "사진을 {$date-q1}.jpg / {$date-q1-sol}.jpg 형식으로 저장하세요."
 ```
 
-실행:
+## 📝 예시: 내부 링크 점검 (lint 보조)
+
 ```powershell
-./scripts/new-daily.ps1
+# check-links.ps1 — wiki/ 의 상대 마크다운 링크가 실제 파일을 가리키는지 확인
+Get-ChildItem -Recurse -File -Filter *.md wiki | ForEach-Object {
+    $dir = $_.DirectoryName
+    (Select-String -Path $_.FullName -Pattern '\]\(([^)]+)\)' -AllMatches).Matches |
+      ForEach-Object { $_.Groups[1].Value } |
+      Where-Object { $_ -notmatch '^(https?:|#|mailto:)' } |
+      ForEach-Object {
+        $p = ($_ -split '#')[0]
+        if ($p -and -not (Test-Path (Join-Path $dir $p))) { "$($_): 깨진 링크 -> $p" }
+      }
+}
 ```
 
 ---
 
 ## 💡 메모
-- 스크립트 없이 손으로 템플릿을 복사해도 위키는 잘 동작합니다.
-- 자동화는 "매일 쓰다 보니 귀찮은 부분"이 생겼을 때 그때 추가하세요.
+- 스크립트 없이도 위키는 동작합니다. 귀찮은 부분이 생기면 그때 추가하세요.

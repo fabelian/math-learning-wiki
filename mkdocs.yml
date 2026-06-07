@@ -1,7 +1,8 @@
 # MkDocs Material 설정 (옵션 B 배포용)
 # 사용법:  pip install mkdocs-material  →  mkdocs serve  →  mkdocs gh-deploy
+# wiki/ 계층(LLM 생성 지식)만 배포합니다. sources/(원본)는 배포 제외.
 site_name: 수학 학습 위키 (중3)
-site_description: 매일 푸는 수학 문제와 풀이를 기록하고 LLM 분석을 축적하는 개인 학습 위키
+site_description: Karpathy LLM Wiki 모델로 컴파일되는 중3 수학 학습 지식베이스
 theme:
   name: material
   language: ko
@@ -22,13 +23,14 @@ theme:
         icon: material/weather-sunny
         name: 라이트 모드로
 
-docs_dir: content
+docs_dir: wiki
 
 nav:
   - 홈: index.md
-  - 일일 기록: daily/README.md
-  - 오답 분석: mistakes/README.md
-  - 개념 노트: concepts/README.md
+  - 활동 로그: log.md
+  - 문제: problems/README.md
+  - 개념: concepts/README.md
+  - 오답 패턴: mistakes/README.md
   - 시험 대비: exams/README.md
   - 대시보드:
       - 약점 지도: dashboard/weakness-map.md
@@ -41,6 +43,11 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
   - search:
