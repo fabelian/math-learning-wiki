@@ -31,7 +31,9 @@ nav:
   - 문제: problems/README.md
   - 개념: concepts/README.md
   - 오답 패턴: mistakes/README.md
-  - 시험 대비: exams/README.md
+  - 시험 대비:
+      - 개요: exams/README.md
+      - 종합대비(미적분Ⅰ+이차방정식): exams/2026-종합대비-미적분1-이차방정식.md
   - 대시보드:
       - 약점 지도: dashboard/weakness-map.md
       - 강점 리포트: dashboard/strength-report.md
