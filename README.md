@@ -1,5 +1,10 @@
 # 📐 Math Learning Wiki (중3 수학 LLM 위키)
 
+### 🌐 위키 사이트 (GitHub Pages): **https://fabelian.github.io/math-learning-wiki/**
+> 📱 폰에서는 위 주소를 **Safari/Chrome**으로 열어 "홈 화면에 추가"하면 앱처럼 쓸 수 있습니다.
+
+---
+
 > **Karpathy의 LLM Wiki 모델**로 설계된 개인 학습 지식베이스.
 > 학생이 문제·풀이 원본을 넣으면, **LLM이 그것을 구조화된 위키로 컴파일**하고
 > 교차참조·약점 집계·정합성 점검을 스스로 유지합니다. RAG로 매번 재검색하지 않고,
