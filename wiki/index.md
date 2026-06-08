@@ -15,6 +15,7 @@
 | 📘 개념 엔티티 | 단원별 누적 지식 | [concepts/](concepts/README.md) |
 | ❌ 오답 패턴 엔티티 | 반복 실수 유형 | [mistakes/](mistakes/README.md) |
 | 🗺️ 약점 지도 | LLM이 재집계하는 롤업 | [dashboard/weakness-map.md](dashboard/weakness-map.md) |
+| 📈 강점 리포트 | 누적 강점·기법 분석 | [dashboard/strength-report.md](dashboard/strength-report.md) |
 | 📆 주간 리뷰 | 주간 회고 | [dashboard/weekly-review.md](dashboard/weekly-review.md) |
 | 📝 시험 대비 | 범위별 컴파일 | [exams/](exams/README.md) |
 | 🪵 활동 로그 | append-only 시간순 기록 | [log.md](log.md) |

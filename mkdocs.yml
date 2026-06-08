@@ -34,6 +34,7 @@ nav:
   - 시험 대비: exams/README.md
   - 대시보드:
       - 약점 지도: dashboard/weakness-map.md
+      - 강점 리포트: dashboard/strength-report.md
       - 주간 리뷰: dashboard/weekly-review.md
 
 markdown_extensions:
