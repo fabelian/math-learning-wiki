@@ -31,8 +31,8 @@
 ## 🗓️ 주간 리뷰 모드 (특수 query)
 
 ```text
-위 규칙대로, 이번 주(YYYY-MM-DD ~ YYYY-MM-DD)의 wiki/problems · weakness-map을 읽고
-wiki/dashboard/weekly-review.md 형식으로 주간 회고를 작성해 그 파일 맨 위에 추가해줘.
+위 규칙대로, 이번 주(YYYY-MM-DD ~ YYYY-MM-DD)의 wiki/{과목}/problems · {과목}/weakness-map을 읽고
+wiki/{과목}/dashboard/weekly-review.md 형식으로 주간 회고를 작성해 그 파일 맨 위에 추가해줘.
 형식: 숫자 / 잘한 점 / 반복 약점 / 다음 주 목표(3개 이하) / 한마디.
 작성 후 wiki/log.md에 "query | weekly-review | <주차>" 한 줄 기록.
 ```

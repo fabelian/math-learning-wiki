@@ -16,27 +16,28 @@ RAG로 매번 재검색하지 않고, **한 번 컴파일해 영구 지식으로
 대상: 대한민국 중3 학생. 한국어로, 격려하되 정확하게.
 
 [입력]
+- 과목: {과목} (math · physics … — sources/{과목}/ 폴더 위치로 판단)
 - source-id: YYYY-MM-DD-qN
-- 문제 사진 / 풀이 사진 (첨부) 또는 sources/의 경로
+- 문제 사진 / 풀이 사진 (첨부) 또는 sources/{과목}/의 경로
 - (선택) 문제 텍스트
 
-[해야 할 일 — CLAUDE.md §5.1 COMPILE 순서를 그대로]
-1. 원본을 읽는다. sources/ 의 파일은 절대 수정하지 않는다.
-2. sources/index.md 에 이 source-id가 없으면 한 줄 추가한다.
-3. wiki/problems/{source-id}.md 를 templates/problem-page-template.md 형식으로 생성:
+[해야 할 일 — CLAUDE.md §5.1 COMPILE 순서를 그대로 · 한 과목 네임스페이스 안에서만]
+1. 원본을 읽는다. sources/ 의 파일은 절대 수정하지 않는다. 먼저 {과목}을 확정한다.
+2. sources/index.md 의 해당 과목 섹션에 이 source-id가 없으면 한 줄 추가한다.
+3. wiki/{과목}/problems/{source-id}.md 를 templates/problem-page-template.md 형식으로 생성:
    - 문제 요약, 학생 풀이 재구성, 정답 여부
    - 장점 / 약점
    - (오답이면) 오답 원인 — CLAUDE.md §6 고정 태그만 사용, 주원인 1개
    - 올바른 풀이 + 개선 액션
    - 원본은 링크로만 참조(베껴쓰지 않음)
-4. 관련 wiki/concepts/{단원}.md 를 통합 갱신(없으면 생성). "자주 하는 실수"에 반영.
+4. 관련 wiki/{과목}/concepts/{단원}.md 를 통합 갱신(없으면 생성). "자주 하는 실수"에 반영.
    기존 서술과 모순되면 명시한다(덮어쓰지 않음).
-5. 오답이면 wiki/mistakes/{패턴}.md 갱신/생성: occurrences에 이 문제 추가, repeat_count +1.
-6. 모든 새 페이지에 양방향 백링크를 건다 (problem ↔ concept ↔ pattern).
-7. wiki/dashboard/weakness-map.md 를 재집계한다 (단원·패턴·원인분포·TOP).
-8. wiki/index.md 의 "현재 상태" 수치를 갱신한다.
+5. 오답이면 wiki/{과목}/mistakes/{패턴}.md 갱신/생성: occurrences에 이 문제 추가, repeat_count +1.
+6. 모든 새 페이지에 양방향 백링크를 건다 (problem ↔ concept ↔ pattern, 같은 과목 내).
+7. wiki/{과목}/dashboard/weakness-map.md 를 재집계한다 (단원·패턴·원인분포·TOP).
+8. wiki/index.md 허브의 해당 과목 "현재 상태" 수치를 갱신한다.
 9. wiki/log.md 에 append-only 한 줄 추가:
-   "- YYYY-MM-DD HH:MM | compile | {source-id} | <한 줄 요약>"
+   "- YYYY-MM-DD HH:MM | compile | {과목} | {source-id} | <한 줄 요약>"
    (시간 모르면 --:--, 임의 시각 금지)
 
 [출력]

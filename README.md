@@ -1,7 +1,8 @@
-# 📐 Math Learning Wiki (중3 수학 LLM 위키)
+# 📐 Learning Wiki (중3 LLM 학습 위키 · 수학·물리)
 
 ### 🌐 위키 사이트 (GitHub Pages): **https://fabelian.github.io/math-learning-wiki/**
 > 📱 폰에서는 위 주소를 **Safari/Chrome**으로 열어 "홈 화면에 추가"하면 앱처럼 쓸 수 있습니다.
+> 📚 **과목별 네임스페이스**로 운영됩니다 — 현재 **수학**(활성), **물리**(준비됨). 새 과목도 같은 방식으로 추가 가능.
 
 ---
 
@@ -27,18 +28,21 @@
 ## 📂 구조
 
 ```text
-math-learning-wiki/
+math-learning-wiki/          # 리포 이름은 유지(다과목 학습 위키)
 ├─ CLAUDE.md            # ⭐ 스키마 (위키 운영체제)
-├─ sources/             # ⬛ RAW (불변): 문제·풀이 원본 + index.md
+├─ sources/             # ⬛ RAW (불변): 원본
+│  ├─ index.md          #   전 과목 원본 카탈로그
+│  └─ {과목}/YYYY/MM/    #   math/ · physics/ … 문제·풀이 원본
 ├─ wiki/                # 🟦 LLM 소유: 컴파일된 지식
-│  ├─ index.md          #   진입점(카탈로그)
-│  ├─ log.md            #   append-only 활동 로그
-│  ├─ problems/         #   문제 1개 = 페이지 1개
-│  ├─ concepts/         #   단원 = 누적 엔티티
-│  ├─ mistakes/         #   반복 오답 = 패턴 엔티티
-│  ├─ dashboard/        #   약점 지도 / 주간 리뷰 (집계)
-│  ├─ exams/            #   시험 대비
-│  └─ templates/        #   페이지 표준 형식
+│  ├─ index.md          #   전 과목 진입점 허브
+│  ├─ log.md            #   append-only 통합 활동 로그
+│  ├─ templates/        #   (공유) 페이지 표준 형식
+│  └─ {과목}/            #   math/ · physics/ …
+│     ├─ problems/      #     문제 1개 = 페이지 1개
+│     ├─ concepts/      #     단원 = 누적 엔티티
+│     ├─ mistakes/      #     반복 오답 = 패턴 엔티티
+│     ├─ dashboard/     #     약점 지도 / 주간 리뷰 (집계)
+│     └─ exams/         #     시험 대비
 ├─ prompts/             # compile · lint · query · 유사문제 · 시험
 ├─ docs/                # workflow · privacy
 └─ scripts/             # (선택) 자동화
@@ -62,9 +66,9 @@ math-learning-wiki/
 
 ```text
 1. 문제 풀기 → 사진 촬영
-2. sources/YYYY/MM/ 에 {source-id} 규칙으로 저장
+2. sources/{과목}/YYYY/MM/ 에 {source-id} 규칙으로 저장 (예: sources/physics/2026/06/…)
 3. Claude Code로 compile 실행 (prompts/compile.md)
-   → LLM이 wiki/problems·concepts·mistakes·weakness-map·log 자동 갱신
+   → LLM이 wiki/{과목}/problems·concepts·mistakes·weakness-map·log 자동 갱신
 4. (주기) lint로 정합성 점검
 5. 궁금하면 query로 위키에 질문
 ```
@@ -87,4 +91,4 @@ math-learning-wiki/
 ## 🧭 시작 지점
 - 🟦 [위키 진입점 (wiki/index.md)](wiki/index.md)
 - ⭐ [스키마 (CLAUDE.md)](CLAUDE.md)
-- 🗺️ [약점 지도](wiki/dashboard/weakness-map.md)
+- 🗺️ [약점 지도](wiki/math/dashboard/weakness-map.md)

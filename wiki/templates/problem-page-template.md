@@ -13,8 +13,8 @@ created: YYYY-MM-DD
 > 단원: **(단원/유형)** · 결과: **(정답/오답)** · 주원인: **`#____`**
 
 ## 🔗 원본 (sources, 불변 — 링크만)
-- 문제: `../../sources/YYYY/MM/{source-id}.jpg`
-- 풀이: `../../sources/YYYY/MM/{source-id}-sol.jpg`
+- 문제: `../../../sources/{과목}/YYYY/MM/{source-id}.jpg`
+- 풀이: `../../../sources/{과목}/YYYY/MM/{source-id}-sol.jpg`
 - 문제 텍스트: (원본 .md 있으면 인용, 없으면 사진 참조)
 
 ## ✍️ 학생 풀이 재구성

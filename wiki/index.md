@@ -4,25 +4,36 @@
 원본은 [`../sources/`](../sources/index.md)에 있고, 여기 페이지들은 그 원본을 정리한 결과입니다.
 
 > 운영 규칙은 [`../CLAUDE.md`](../CLAUDE.md) 참조.
+> 이 위키는 **과목별 네임스페이스**로 나뉩니다. 각 과목은 `wiki/{과목}/` 아래에 독립된 problems·concepts·mistakes·dashboard·exams를 가집니다.
 
 ---
 
-## 🧭 카탈로그
+## 📚 과목 (Subjects)
+
+| 과목 | 진행 | 진입점 |
+|------|------|--------|
+| 🟦 **수학** | 미적분Ⅰ 진행 중 (문제 62개 컴파일) | [math/](math/dashboard/weakness-map.md) |
+| 🟩 **물리** | 시작 전 (틀만 준비됨) | [physics/](physics/dashboard/weakness-map.md) |
+
+> 새 과목을 추가하려면: `sources/{과목}/`, `wiki/{과목}/{problems,concepts,mistakes,dashboard,exams}/`를 만들고 이 표에 한 줄 추가.
+
+공유 인프라(과목 무관): [활동 로그](log.md) · [템플릿](templates/) · [원본 카탈로그](../sources/index.md)
+
+---
+
+## 🟦 수학 (math)
 
 | 영역 | 설명 | 링크 |
 |------|------|------|
-| 🧩 문제 페이지 | 원본 1개 = 컴파일된 페이지 1개 | [problems/](problems/README.md) |
-| 📘 개념 엔티티 | 단원별 누적 지식 | [concepts/](concepts/README.md) |
-| ❌ 오답 패턴 엔티티 | 반복 실수 유형 | [mistakes/](mistakes/README.md) |
-| 🗺️ 약점 지도 | LLM이 재집계하는 롤업 | [dashboard/weakness-map.md](dashboard/weakness-map.md) |
-| 📈 강점 리포트 | 누적 강점·기법 분석 | [dashboard/strength-report.md](dashboard/strength-report.md) |
-| 📆 주간 리뷰 | 주간 회고 | [dashboard/weekly-review.md](dashboard/weekly-review.md) |
-| 📝 시험 대비 | 범위별 컴파일 | [exams/](exams/README.md) |
-| 🪵 활동 로그 | append-only 시간순 기록 | [log.md](log.md) |
+| 🧩 문제 페이지 | 원본 1개 = 컴파일된 페이지 1개 | [math/problems/](math/problems/README.md) |
+| 📘 개념 엔티티 | 단원별 누적 지식 | [math/concepts/](math/concepts/README.md) |
+| ❌ 오답 패턴 엔티티 | 반복 실수 유형 | [math/mistakes/](math/mistakes/README.md) |
+| 🗺️ 약점 지도 | LLM이 재집계하는 롤업 | [math/dashboard/weakness-map.md](math/dashboard/weakness-map.md) |
+| 📈 강점 리포트 | 누적 강점·기법 분석 | [math/dashboard/strength-report.md](math/dashboard/strength-report.md) |
+| 📆 주간 리뷰 | 주간 회고 | [math/dashboard/weekly-review.md](math/dashboard/weekly-review.md) |
+| 📝 시험 대비 | 범위별 컴파일 | [math/exams/](math/exams/README.md) |
 
----
-
-## 📊 현재 상태 (compile/lint 시 LLM이 갱신)
+### 📊 수학 현재 상태 (compile/lint 시 LLM이 갱신)
 
 - **학습자 트랙:** 중3 / 학원 선행 **미적분Ⅰ 진행 중** (공통수학1·2, 대수 완료)
 - **등록된 원본 수:** 6 (시작테스트 1·2·3·4차, 단원테스트, 진도확인테스트)
@@ -33,9 +44,7 @@
 - **확정 오답 원인:** 없음
 - **마지막 lint:** 2026-06-08 — 끊긴 링크·고아·모순 없음. 개념 8종 백링크 정합성 갱신.
 
----
-
-## 📚 중3 수학 단원 (개념 엔티티 대상)
+### 📚 중3 수학 단원 (개념 엔티티 대상)
 
 1. 제곱근과 실수
 2. 다항식의 곱셈과 인수분해
@@ -48,16 +57,29 @@
 
 ---
 
+## 🟩 물리 (physics)
+
+| 영역 | 설명 | 링크 |
+|------|------|------|
+| 🧩 문제 페이지 | 원본 1개 = 컴파일된 페이지 1개 | [physics/problems/](physics/problems/README.md) |
+| 📘 개념 엔티티 | 단원별 누적 지식 | [physics/concepts/](physics/concepts/README.md) |
+| ❌ 오답 패턴 엔티티 | 반복 실수 유형 | [physics/mistakes/](physics/mistakes/README.md) |
+| 🗺️ 약점 지도 | LLM이 재집계하는 롤업 | [physics/dashboard/weakness-map.md](physics/dashboard/weakness-map.md) |
+
+> 아직 컴파일된 문제가 없습니다. `sources/physics/`에 첫 문제·풀이를 넣으면 compile이 시작됩니다.
+
+---
+
 ## 🔁 컴파일 사이클
 
 ```text
-sources/에 문제·풀이 투입(학생)
+sources/{과목}/에 문제·풀이 투입(학생)
    → LLM compile (prompts/compile.md)
-       → problems/{id}.md 생성
-       → concepts/{단원}.md 갱신
-       → mistakes/{패턴}.md 갱신 (오답 시)
-       → dashboard/weakness-map.md 재집계
-       → index.md · log.md 갱신
+       → wiki/{과목}/problems/{id}.md 생성
+       → wiki/{과목}/concepts/{단원}.md 갱신
+       → wiki/{과목}/mistakes/{패턴}.md 갱신 (오답 시)
+       → wiki/{과목}/dashboard/weakness-map.md 재집계
+       → wiki/index.md · wiki/log.md 갱신
    → 주기적 LLM lint (prompts/lint.md): 모순·고아·끊긴 링크 점검
    → 질문은 query (prompts/query.md): 위키를 읽어 답
 ```

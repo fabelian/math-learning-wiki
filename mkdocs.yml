@@ -1,8 +1,8 @@
 # MkDocs Material 설정 (옵션 B 배포용)
 # 사용법:  pip install mkdocs-material  →  mkdocs serve  →  mkdocs gh-deploy
 # wiki/ 계층(LLM 생성 지식)만 배포합니다. sources/(원본)는 배포 제외.
-site_name: 수학 학습 위키 (중3)
-site_description: Karpathy LLM Wiki 모델로 컴파일되는 중3 수학 학습 지식베이스
+site_name: 학습 위키 (중3)
+site_description: Karpathy LLM Wiki 모델로 컴파일되는 중3 학습 지식베이스 (수학·물리)
 theme:
   name: material
   language: ko
@@ -28,16 +28,23 @@ docs_dir: wiki
 nav:
   - 홈: index.md
   - 활동 로그: log.md
-  - 문제: problems/README.md
-  - 개념: concepts/README.md
-  - 오답 패턴: mistakes/README.md
-  - 시험 대비:
-      - 개요: exams/README.md
-      - 종합대비(미적분Ⅰ+이차방정식): exams/2026-종합대비-미적분1-이차방정식.md
-  - 대시보드:
-      - 약점 지도: dashboard/weakness-map.md
-      - 강점 리포트: dashboard/strength-report.md
-      - 주간 리뷰: dashboard/weekly-review.md
+  - 수학:
+      - 문제: math/problems/README.md
+      - 개념: math/concepts/README.md
+      - 오답 패턴: math/mistakes/README.md
+      - 시험 대비:
+          - 개요: math/exams/README.md
+          - 종합대비(미적분Ⅰ+이차방정식): math/exams/2026-종합대비-미적분1-이차방정식.md
+      - 대시보드:
+          - 약점 지도: math/dashboard/weakness-map.md
+          - 강점 리포트: math/dashboard/strength-report.md
+          - 주간 리뷰: math/dashboard/weekly-review.md
+  - 물리:
+      - 문제: physics/problems/README.md
+      - 개념: physics/concepts/README.md
+      - 오답 패턴: physics/mistakes/README.md
+      - 시험 대비: physics/exams/README.md
+      - 약점 지도: physics/dashboard/weakness-map.md
 
 markdown_extensions:
   - admonition

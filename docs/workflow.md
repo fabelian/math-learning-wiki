@@ -9,23 +9,23 @@ Karpathy LLM Wiki 모델에서 이 위키를 운영하는 방법입니다.
 
 ```text
 1. 학생: 문제 풀기 → 문제/풀이 사진 촬영
-2. 학생: sources/YYYY/MM/ 에 저장
+2. 학생: sources/{과목}/YYYY/MM/ 에 저장  (과목 = math · physics …)
    - 문제: {source-id}.jpg   풀이: {source-id}-sol.jpg
    - source-id = YYYY-MM-DD-qN
-3. LLM(compile): prompts/compile.md 실행
-   → wiki/problems/{id}.md 생성
-   → wiki/concepts/{단원}.md 통합 갱신
-   → (오답) wiki/mistakes/{패턴}.md 갱신
-   → wiki/dashboard/weakness-map.md 재집계
+3. LLM(compile): prompts/compile.md 실행 (해당 과목 네임스페이스 안에서)
+   → wiki/{과목}/problems/{id}.md 생성
+   → wiki/{과목}/concepts/{단원}.md 통합 갱신
+   → (오답) wiki/{과목}/mistakes/{패턴}.md 갱신
+   → wiki/{과목}/dashboard/weakness-map.md 재집계
    → wiki/index.md · wiki/log.md 갱신
 ```
 
 ### 흐름도
 ```text
-[문제] → [사진] → sources/ (불변)
+[문제] → [사진] → sources/{과목}/ (불변)
                       │  compile
                       ▼
-        wiki/problems ── concepts ── mistakes
+   wiki/{과목}/problems ── concepts ── mistakes
                       \      |      /
                        weakness-map (집계) → index/log 갱신
 ```
@@ -35,7 +35,7 @@ Karpathy LLM Wiki 모델에서 이 위키를 운영하는 방법입니다.
 ## 📆 주간 (20분)
 
 ```text
-1. LLM(query 주간모드): prompts/query.md → wiki/dashboard/weekly-review.md 작성
+1. LLM(query 주간모드): prompts/query.md → wiki/{과목}/dashboard/weekly-review.md 작성
 2. LLM(lint): prompts/lint.md → 모순·고아·끊긴 링크·오래된 약점 점검·수정
 3. 다음 주 목표 3개 이하 설정
 ```
@@ -46,9 +46,9 @@ Karpathy LLM Wiki 모델에서 이 위키를 운영하는 방법입니다.
 
 ```text
 1. 범위 확정
-2. LLM(exam-prep): prompts/exam-prep.md → wiki/exams/{시험}.md 컴파일
+2. LLM(exam-prep): prompts/exam-prep.md → wiki/{과목}/exams/{시험}.md 컴파일
    (범위 내 약점·오답 필터링 + 예상 문제)
-3. 범위 오답 재풀이 → sources/에 넣고 compile (호전 추적)
+3. 범위 오답 재풀이 → sources/{과목}/에 넣고 compile (호전 추적)
 4. 모의 점검(시간 재기)
 5. 시험 후: "시험 후 회고"에 예측 vs 실제 기록
 ```
@@ -58,7 +58,7 @@ Karpathy LLM Wiki 모델에서 이 위키를 운영하는 방법입니다.
 ## 🤖 Claude Code로 운영하기 (권장)
 
 이 저장소를 Claude Code에서 열면 `CLAUDE.md`가 자동 로드됩니다. 예:
-- "sources/2026/06/2026-06-07-q1 을 compile 해줘"
+- "sources/math/2026/06/2026-06-07-q1 을 compile 해줘"  (물리는 sources/physics/…)
 - "위키 lint 해줘"
 - "이번 달 가장 약한 단원이 뭐야?" (query)
 

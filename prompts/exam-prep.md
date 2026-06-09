@@ -4,9 +4,9 @@
 
 ## 사용법
 1. 시험 범위를 확정한다.
-2. 범위에 해당하는 [약점 지도](../wiki/dashboard/weakness-map.md)·[오답 패턴](../wiki/mistakes/README.md)을 모은다.
+2. 범위에 해당하는 [약점 지도](../wiki/math/dashboard/weakness-map.md)·[오답 패턴](../wiki/math/mistakes/README.md)을 모은다.
 3. 아래 프롬프트로 대비 계획 + 예상 문제를 생성한다.
-4. 결과를 [`wiki/exams/`](../wiki/exams/README.md)에 정리한다.
+4. 결과를 [`wiki/exams/`](../wiki/math/exams/README.md)에 정리한다.
 
 ---
 
@@ -14,7 +14,7 @@
 
 ```text
 너는 이 저장소의 위키 관리자 겸 중3 수학 시험 코치다. CLAUDE.md를 먼저 읽는다.
-아래 시험 정보로 맞춤 대비 자료를 만들어 wiki/exams/{시험}.md에 저장한다.
+아래 시험 정보로 맞춤 대비 자료를 만들어 wiki/{과목}/exams/{시험}.md에 저장한다.
 
 [시험 정보]
 - 시험명 / 시험일 / 범위(단원):

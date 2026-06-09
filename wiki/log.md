@@ -22,6 +22,7 @@
 - 2026-06-08 --:-- | exam | 2026-종합대비-미적분1-이차방정식 | 전범위(이차방정식+미적분Ⅰ) 시험 대비 자료 생성. 핵심기법 요약 + 신규 예상문제 15(난이도별, 정답 접기) + 직전 체크리스트. exams/nav 연결.
 - 2026-06-08 --:-- | report | dashboard/strength-report | 누적 73문항 분석 강점 리포트 생성. 6대 핵심기법(미분계수 정의·다항식 결정·미분가능 조건·근과계수·극한기본기·그래프추론) 정리, 주의점 1개(음수 제곱근). nav/index 연결.
 - 2026-06-08 --:-- | lint | wiki 전체 | 끊긴 링크 0(템플릿 placeholder 6 제외)·고아 0·태그 일관성 OK·집계(62) 정확. 백링크 비대칭 발견→개념 8종의 linked_problems를 실제 링커 목록으로 갱신(다항함수의미분 21, 함수의극한 19, 이차방정식 13, 함수의연속 13, 미분가능성 4, 속도와가속도 3, 평균값정리 3, 그래프와방정식의실근 3). 모순·오래된 약점 없음.
+- 2026-06-10 --:-- | refactor | all | 위키 멀티과목 네임스페이스 전환 | wiki/{problems,concepts,mistakes,dashboard,exams}→wiki/math/ 이동, sources/2026·이미지→sources/math/. 상대링크 일괄 보정(소스링크 +1단계, sources/math 반영). 물리 네임스페이스 골격 생성(wiki/physics/* + sources/physics/). index·sources/index·mkdocs·README·CLAUDE 스키마(§1.5 추가)·템플릿 깊이 갱신. 깨진 링크 0(템플릿 placeholder 9 제외). 수학 콘텐츠 내용 변경 없음.
 ```
 
 <!-- 이 아래로 compile/lint/query 활동을 한 줄씩 추가하세요. -->
