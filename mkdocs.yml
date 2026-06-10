@@ -58,7 +58,8 @@ markdown_extensions:
 
 extra_javascript:
   - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  # jsdelivr가 unpkg보다 한국 모바일망에서 안정적(수식이 날것으로 보이는 문제 방지)
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
   - search:
