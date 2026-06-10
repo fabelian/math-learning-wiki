@@ -13,7 +13,7 @@
 | 과목 | 진행 | 진입점 |
 |------|------|--------|
 | 🟦 **수학** | 미적분Ⅰ 진행 중 (문제 62개 컴파일) | [math/](math/dashboard/weakness-map.md) |
-| 🟩 **물리** | 시작 전 (틀만 준비됨) | [physics/](physics/dashboard/weakness-map.md) |
+| 🟩 **물리** | 역학적 시스템 시작 (12문항 중 2문항 정답·해설) | [physics/](physics/dashboard/weakness-map.md) |
 
 > 새 과목을 추가하려면: `sources/{과목}/`, `wiki/{과목}/{problems,concepts,mistakes,dashboard,exams}/`를 만들고 이 표에 한 줄 추가.
 
@@ -66,7 +66,8 @@
 | ❌ 오답 패턴 엔티티 | 반복 실수 유형 | [physics/mistakes/](physics/mistakes/README.md) |
 | 🗺️ 약점 지도 | LLM이 재집계하는 롤업 | [physics/dashboard/weakness-map.md](physics/dashboard/weakness-map.md) |
 
-> 아직 컴파일된 문제가 없습니다. `sources/physics/`에 첫 문제·풀이를 넣으면 compile이 시작됩니다.
+- **진행:** 역학적 시스템(힘의 평형) 시작. 1차 시험대비 12문항 중 **q1·q2 정답·해설 완료**, q3~q12는 사진 판독 보강 대기.
+- **주의:** 현재 페이지는 **정답·해설만** — 학생이 직접 푼 풀이를 넣으면 오답 원인·약점이 집계됩니다.
 
 ---
 
