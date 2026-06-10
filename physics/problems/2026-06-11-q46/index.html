@@ -1055,15 +1055,22 @@ $<span class="arithmatex">\(\therefore a=\frac{f_2-f_1}{3m}=\frac{mg}{3m}=\frac{
 <p>C에 대한 두 식(<span class="arithmatex">\(T_1-f_2=2ma\)</span>, <span class="arithmatex">\(f_2-T_2=2ma\)</span>)을 더하면 <span class="arithmatex">\(T_1-T_2=4ma=\tfrac{4mg}{3}&gt;0\)</span>. → 끊기 전이 큼. (q는 같은 줄이라 C·B에 같은 크기) (✓)</p>
 <h3 id="a-e-bc-e">ㄷ — A 위치E 감소 &gt; B·C 운동E 합<a class="headerlink" href="#a-e-bc-e" title="Permanent link">&para;</a></h3>
 <p>거리 <span class="arithmatex">\(d\)</span> 이동, <span class="arithmatex">\(a=\frac{g}{3}\)</span>, <span class="arithmatex">\(v^2=2ad=\frac{2gd}{3}\)</span>. (<span class="arithmatex">\(f_1\)</span>=B 빗면 중력성분, <span class="arithmatex">\(f_2\)</span>=C 빗면 중력성분, <span class="arithmatex">\(f_2-f_1=mg\)</span>)</p>
-<p><strong>전체 역학적 에너지 보존(위치E 감소 = 운동E 증가 + 위치E 증가):</strong>
-$<span class="arithmatex">\(\underbrace{\Delta U_A}_{3mgd}+\underbrace{\Delta U_B}_{f_1 d}=\underbrace{\Delta K_{A}+\Delta K_B+\Delta K_C}_{2mgd}+\underbrace{\Delta U_C}_{f_2 d}\)</span>$
+<p><strong>▶ 풀이 1 — 직접 계산 (빠른 비교)</strong>
+- A의 위치E 감소 <span class="arithmatex">\(=3mg\,d\)</span>
+- B·C 운동E 합 <span class="arithmatex">\(=\tfrac12 m v^2+\tfrac12(2m)v^2=\tfrac32 m v^2=\tfrac32 m\cdot\tfrac{2gd}{3}=mgd\)</span>
+$<span class="arithmatex">\(\therefore\ \Delta U_A=3mgd \;&gt;\; \Delta K_B+\Delta K_C=mgd\quad(✓)\)</span>$</p>
+<p><strong>▶ 풀이 2 — 별해 · 전체 에너지 보존 수지 (왜 더 큰지, B의 위치E까지 추적)</strong>
+시스템 전체 역학적 에너지 보존 (위치E 잃는 쪽 = 운동E 증가 + 위치E 얻는 쪽):
+$<span class="arithmatex">\(\underbrace{\Delta U_A}_{3mgd}+\underbrace{\Delta U_B}_{f_1 d}=\underbrace{\Delta K_A+\Delta K_B+\Delta K_C}_{2mgd}+\underbrace{\Delta U_C}_{f_2 d}\)</span>$
 (검산: <span class="arithmatex">\(3mgd+f_1d=2mgd+f_2d \Leftrightarrow f_2-f_1=mg\)</span> ✓)</p>
-<p>여기서 <strong>B는 빗면을 내려가 위치E가 감소</strong>하고(<span class="arithmatex">\(\Delta U_B=f_1d\)</span>), <strong>C는 올라가 증가</strong>한다(<span class="arithmatex">\(\Delta U_C=f_2d\)</span>). <span class="arithmatex">\(f_2-f_1=mg\)</span>이므로
+<ul>
+<li><strong>B도 빗면을 내려가 위치E가 감소</strong>(<span class="arithmatex">\(\Delta U_B=f_1d\)</span>)하지만, <strong>C는 올라가 증가</strong>(<span class="arithmatex">\(\Delta U_C=f_2d\)</span>). <span class="arithmatex">\(f_2-f_1=mg\)</span>이므로
 $<span class="arithmatex">\(\Delta U_C-\Delta U_B=(f_2-f_1)d=mgd&gt;0\)</span>$
-즉 <strong>C의 위치E 증가량이 B의 위치E 감소량보다 <span class="arithmatex">\(mgd\)</span> 만큼 크다.</strong> (B의 감소분은 빠진 게 아니라 이렇게 상계된다.)</p>
-<p>운동E: <span class="arithmatex">\(\Delta K_B+\Delta K_C=\tfrac12 m v^2+\tfrac12(2m)v^2=\tfrac32 m v^2=mgd\)</span>. A의 위치E 감소 <span class="arithmatex">\(=3mgd\)</span>.
-$<span class="arithmatex">\(\Delta U_A-(\Delta K_B+\Delta K_C)=3mgd-mgd=2mgd&gt;0\quad(✓)\)</span>$
-이 차이 <span class="arithmatex">\(2mgd\)</span>의 정체: <strong>A 자신의 운동E</strong>(<span class="arithmatex">\(\Delta K_A=mgd\)</span>) <span class="arithmatex">\(+\)</span> <strong>(C 올림 − B 내림) 순증가 위치E</strong>(<span class="arithmatex">\(\Delta U_C-\Delta U_B=mgd\)</span>). → A 감소량이 더 크다.</p>
+즉 <strong>C의 위치E 증가량이 B의 위치E 감소량보다 <span class="arithmatex">\(mgd\)</span> 만큼 크다</strong> (B의 감소분은 빠진 게 아니라 C 증가분과 상계됨).</li>
+<li>A의 감소분을 분해하면
+$<span class="arithmatex">\(\Delta U_A=\underbrace{(\Delta K_B+\Delta K_C)}_{mgd}+\underbrace{\Delta K_A}_{mgd}+\underbrace{(\Delta U_C-\Delta U_B)}_{mgd}=3mgd\)</span>$
+→ A가 잃은 에너지는 <strong>① B·C 운동E + ② A 자신의 운동E + ③ (C 올림−B 내림) 순 위치E 증가</strong>로 나뉘므로, ①(B·C 운동E)만보다 당연히 크다. (✓)</li>
+</ul>
 <p>→ ㄱ, ㄴ, ㄷ 모두 옳음 = <strong>⑤</strong>.</p>
 <h2 id="_4">💡 핵심<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
