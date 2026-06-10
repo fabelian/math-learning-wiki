@@ -13,7 +13,7 @@
 | 과목 | 진행 | 진입점 |
 |------|------|--------|
 | 🟦 **수학** | 미적분Ⅰ 진행 중 (문제 62개 컴파일) | [math/](math/dashboard/weakness-map.md) |
-| 🟩 **물리** | 역학적 시스템 13문항(평형·돌림힘·운동법칙/에너지) 정답·해설 | [physics/](physics/dashboard/weakness-map.md) |
+| 🟩 **물리** | 역학적 시스템 23문항(평형·돌림힘·운동법칙·에너지·탄성·충돌), 딸 채점 시작 | [physics/](physics/dashboard/weakness-map.md) |
 
 > 새 과목을 추가하려면: `sources/{과목}/`, `wiki/{과목}/{problems,concepts,mistakes,dashboard,exams}/`를 만들고 이 표에 한 줄 추가.
 
@@ -66,8 +66,8 @@
 | ❌ 오답 패턴 엔티티 | 반복 실수 유형 | [physics/mistakes/](physics/mistakes/README.md) |
 | 🗺️ 약점 지도 | LLM이 재집계하는 롤업 | [physics/dashboard/weakness-map.md](physics/dashboard/weakness-map.md) |
 
-- **개념:** [힘과 힘의 평형](physics/concepts/힘의평형.md) · [돌림힘과 역학적 평형](physics/concepts/돌림힘과역학적평형.md) · [운동 법칙과 역학적 에너지](physics/concepts/운동법칙과역학적에너지.md)
-- **진행:** 1차 시험대비(역학적 시스템) **12문항 전체 정답·해설 완료** (q1~q12) + **q46**(연결계, 해설 검토).
+- **개념:** [힘과 힘의 평형](physics/concepts/힘의평형.md) · [돌림힘과 역학적 평형](physics/concepts/돌림힘과역학적평형.md) · [운동 법칙과 역학적 에너지](physics/concepts/운동법칙과역학적에너지.md) · [탄성력과 충돌](physics/concepts/탄성력과충돌.md)
+- **진행:** 역학평형 12문항 + 운동법칙/에너지/탄성 11문항(q32~q56). **딸 채점 8/9 정답** 👏 (#48만 막힘).
 - **주의:** 현재 페이지는 **정답·해설만** — 학생이 직접 푼 풀이를 넣으면 오답 원인·약점이 집계됩니다.
 
 ---
