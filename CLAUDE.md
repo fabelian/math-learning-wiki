@@ -97,6 +97,7 @@ LLM은 아래 형식을 지켜 페이지를 만든다. 형식 원본은 `wiki/te
 - frontmatter: `source`, `unit`, `result(정답/오답)`, `cause_tags`, `created`
 - 본문: 문제 / 학생 풀이 재구성 / 정답 여부 / 장점 / 약점 / **오답 원인** / 올바른 풀이 / 개선 액션
 - **백링크 필수:** 관련 `concepts/`, 관련 `mistakes/` 패턴 페이지로 링크.
+- **원본(sources) 링크 주의:** `sources/`는 사이트(`wiki/`)에 배포되지 않으므로 **상대링크면 배포 사이트에서 404**다. 원본 사진·텍스트 링크는 **GitHub 절대 URL**(`https://github.com/fabelian/math-learning-wiki/blob/main/sources/...`)로 건다. (`CLAUDE.md`·`prompts/` 링크도 동일.) 같은 과목 내 `concepts/`·`mistakes/` 백링크는 상대경로 그대로 OK.
 
 ### 4.2 개념 엔티티 페이지 `wiki/{과목}/concepts/{단원}.md`
 단원/개념은 **누적되는 엔티티**다. 새 문제가 컴파일될 때마다 갱신.
