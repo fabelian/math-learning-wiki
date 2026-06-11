@@ -17,6 +17,14 @@
 
 > 새 과목을 추가하려면: `sources/{과목}/`, `wiki/{과목}/{problems,concepts,mistakes,dashboard,exams}/`를 만들고 이 표에 한 줄 추가.
 
+## 🗂️ 기타 도메인 (Non-subject)
+
+| 도메인 | 내용 | 진입점 |
+|--------|------|--------|
+| 🎓 **입시** | 고입(외대부고 등) 전형·자소서·면접·영어준비·고교선택 | [admissions/](admissions/index.md) |
+
+> 입시는 과목과 달리 problems/concepts 구조가 아니라 schools/·topics/ 구조다. 원본(설명회 녹취 등)은 개인정보로 **공개 제외(로컬 보존)**.
+
 공유 인프라(과목 무관): [활동 로그](log.md) · [템플릿](templates/) · [원본 카탈로그](https://github.com/fabelian/math-learning-wiki/blob/main/sources/index.md)
 
 ---

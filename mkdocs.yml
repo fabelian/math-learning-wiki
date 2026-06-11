@@ -45,6 +45,13 @@ nav:
       - 오답 패턴: physics/mistakes/README.md
       - 시험 대비: physics/exams/README.md
       - 약점 지도: physics/dashboard/weakness-map.md
+  - 입시:
+      - 개요: admissions/index.md
+      - 용인외대부고: admissions/schools/용인외대부고.md
+      - 자기소개서: admissions/topics/자기소개서.md
+      - 면접: admissions/topics/면접.md
+      - 영어시험 준비: admissions/topics/영어시험-준비.md
+      - 고교 선택: admissions/topics/고교선택.md
 
 markdown_extensions:
   - admonition

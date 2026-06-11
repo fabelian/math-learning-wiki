@@ -47,6 +47,13 @@
 만들고 각 폴더에 README, `wiki/{과목}/dashboard/weakness-map.md`를 둔 뒤,
 `wiki/index.md`·`sources/index.md`·`mkdocs.yml`에 과목 섹션을 추가한다.
 
+## 1.6 비과목 도메인 (입시 등)
+
+과목(problems/concepts/mistakes)과 **성격이 다른 지식**은 별도 도메인으로 둔다. 현재: **`admissions`(입시)**.
+- 구조가 과목과 다르다: `wiki/admissions/{index.md, schools/, topics/}` (문제풀이가 아니라 **참조·정리형 지식**).
+- 원본은 `sources/admissions/`. **단, 설명회 녹취·제3자 콘텐츠·개인정보(실명·연락처)가 섞이면 공개 저장소에 푸시하지 않는다** → `.gitignore`로 제외하고 로컬에만 보존. 위키에는 **사실 위주로 탈식별·요약**만 올린다.
+- 컴파일 시 강사 의견/추정치와 공식 사실을 구분 표시하고, "공식 모집요강 교차확인" 단서를 남긴다.
+
 ---
 
 ## 2. 디렉터리 지도
