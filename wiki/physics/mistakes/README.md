@@ -8,7 +8,7 @@
 
 - 새 페이지는 [`../../templates/mistake-pattern-template.md`](../../templates/mistake-pattern-template.md) 형식.
 - 해당 패턴의 모든 발생 문제를 링크로 모으고 `repeat_count`를 올린다.
-- 오답 원인 태그는 [`../../../CLAUDE.md`](../../../CLAUDE.md) §6 고정 어휘 사용.
+- 오답 원인 태그는 [`../../../CLAUDE.md`](https://github.com/fabelian/math-learning-wiki/blob/main/CLAUDE.md) §6 고정 어휘 사용.
 
 ## 🗂️ 패턴 인덱스
 

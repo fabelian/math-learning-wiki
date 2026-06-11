@@ -1,9 +1,9 @@
 # 🟦 wiki/ — 위키 진입점 (Index)
 
 이 위키는 **LLM이 컴파일·유지**하는 지식 계층입니다 (Karpathy LLM Wiki 모델).
-원본은 [`../sources/`](../sources/index.md)에 있고, 여기 페이지들은 그 원본을 정리한 결과입니다.
+원본은 [`../sources/`](https://github.com/fabelian/math-learning-wiki/blob/main/sources/index.md)에 있고, 여기 페이지들은 그 원본을 정리한 결과입니다.
 
-> 운영 규칙은 [`../CLAUDE.md`](../CLAUDE.md) 참조.
+> 운영 규칙은 [`../CLAUDE.md`](https://github.com/fabelian/math-learning-wiki/blob/main/CLAUDE.md) 참조.
 > 이 위키는 **과목별 네임스페이스**로 나뉩니다. 각 과목은 `wiki/{과목}/` 아래에 독립된 problems·concepts·mistakes·dashboard·exams를 가집니다.
 
 ---
@@ -17,7 +17,7 @@
 
 > 새 과목을 추가하려면: `sources/{과목}/`, `wiki/{과목}/{problems,concepts,mistakes,dashboard,exams}/`를 만들고 이 표에 한 줄 추가.
 
-공유 인프라(과목 무관): [활동 로그](log.md) · [템플릿](templates/) · [원본 카탈로그](../sources/index.md)
+공유 인프라(과목 무관): [활동 로그](log.md) · [템플릿](templates/) · [원본 카탈로그](https://github.com/fabelian/math-learning-wiki/blob/main/sources/index.md)
 
 ---
 

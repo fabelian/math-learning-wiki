@@ -19,7 +19,7 @@
 
 ## 🏷️ 오답 원인 태그 (고정 어휘)
 
-[CLAUDE.md §6](../../../CLAUDE.md)과 동일. compile 시 반드시 이 태그만 사용.
+[CLAUDE.md §6](https://github.com/fabelian/math-learning-wiki/blob/main/CLAUDE.md)과 동일. compile 시 반드시 이 태그만 사용.
 
 | 태그 | 의미 |
 |------|------|

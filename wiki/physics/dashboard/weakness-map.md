@@ -33,4 +33,4 @@
 
 ## 오답 원인 태그 분포
 
-> [`../../../CLAUDE.md`](../../../CLAUDE.md) §6 고정 어휘 기준. 데이터 누적 시 집계.
+> [`../../../CLAUDE.md`](https://github.com/fabelian/math-learning-wiki/blob/main/CLAUDE.md) §6 고정 어휘 기준. 데이터 누적 시 집계.

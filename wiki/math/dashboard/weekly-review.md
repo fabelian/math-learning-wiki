@@ -1,7 +1,7 @@
 # 📆 weekly-review.md — 주간 리뷰
 
 일주일치 위키 데이터를 LLM이 회고로 컴파일합니다.
-[`prompts/query.md`](../../../prompts/query.md)의 "주간 리뷰" 모드를 사용하세요.
+[`prompts/query.md`](https://github.com/fabelian/math-learning-wiki/blob/main/prompts/query.md)의 "주간 리뷰" 모드를 사용하세요.
 
 > 새 주차는 맨 위에 추가(최신순). 생성 사실은 [log.md](../../log.md)에 한 줄 기록.
 

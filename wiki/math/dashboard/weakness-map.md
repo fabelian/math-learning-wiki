@@ -1,6 +1,6 @@
 # 🗺️ weakness-map.md — 약점 지도 (LLM 집계)
 
-단원·패턴별 약점 롤업입니다. **compile/lint 시 LLM이 자동 재집계**합니다 ([CLAUDE.md §5.1](../../../CLAUDE.md)).
+단원·패턴별 약점 롤업입니다. **compile/lint 시 LLM이 자동 재집계**합니다 ([CLAUDE.md §5.1](https://github.com/fabelian/math-learning-wiki/blob/main/CLAUDE.md)).
 
 마지막 재집계: **2026-06-07 (시작테스트 12문항 compile)**
 

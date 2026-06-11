@@ -6,14 +6,14 @@
 
 ## 📌 규칙
 
-- 파일명: `{source-id}.md` (예: `2026-06-10-q1.md`) — [sources](../../../sources/index.md)의 id와 1:1.
+- 파일명: `{source-id}.md` (예: `2026-06-10-q1.md`) — [sources](https://github.com/fabelian/math-learning-wiki/blob/main/sources/index.md)의 id와 1:1.
 - 새 페이지는 [`../../templates/problem-page-template.md`](../../templates/problem-page-template.md) 형식.
 - 원본은 **링크로 참조만** 한다. 반드시 [개념](../concepts/README.md)·[오답 패턴](../mistakes/README.md)으로 백링크.
 
 ## 🗂️ 문제 인덱스 (최신순)
 
 ### 2026-06-10 물리 1차 시험대비 단원평가 (역학적 시스템) — 12문항 전체 컴파일 ✅
-범위: 01 힘과 힘의 평형 · 02 돌림힘과 역학적 평형. 원본: [역학평형](../../../sources/physics/2026/06/2026-06-10-역학평형.md)
+범위: 01 힘과 힘의 평형 · 02 돌림힘과 역학적 평형. 원본: [역학평형](https://github.com/fabelian/math-learning-wiki/blob/main/sources/physics/2026/06/2026-06-10-역학평형.md)
 
 **01 힘과 힘의 평형**
 | id | 유형 | 정답 |

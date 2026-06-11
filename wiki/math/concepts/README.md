@@ -9,7 +9,7 @@
 
 ## 📌 규칙
 - 파일명: `{단원}.md`. 형식: [`../templates/concept-note-template.md`](../../templates/concept-note-template.md)
-- 새 사실은 **통합 갱신**(덮어쓰기 금지), 모순 시 명시 ([CLAUDE.md §4.2](../../../CLAUDE.md)).
+- 새 사실은 **통합 갱신**(덮어쓰기 금지), 모순 시 명시 ([CLAUDE.md §4.2](https://github.com/fabelian/math-learning-wiki/blob/main/CLAUDE.md)).
 
 ---
 

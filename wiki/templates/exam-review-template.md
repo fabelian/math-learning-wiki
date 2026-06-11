@@ -30,7 +30,7 @@ actual_score: null
 - [ ] (오답 문서 링크) — 재풀이
 
 ## 4. 🧩 보강용 유사 문제
-> [유사 문제 생성 프롬프트](../../prompts/generate-similar-problems.md) 활용.
+> [유사 문제 생성 프롬프트](https://github.com/fabelian/math-learning-wiki/blob/main/prompts/generate-similar-problems.md) 활용.
 
 - [ ] 약점 유형 A 5문제
 - [ ] 약점 유형 B 5문제

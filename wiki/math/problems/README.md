@@ -6,7 +6,7 @@
 
 ## 📌 규칙
 
-- 파일명: `{source-id}.md` (예: `2026-06-07-q1.md`) — [sources](../../../sources/index.md)의 id와 1:1.
+- 파일명: `{source-id}.md` (예: `2026-06-07-q1.md`) — [sources](https://github.com/fabelian/math-learning-wiki/blob/main/sources/index.md)의 id와 1:1.
 - 새 페이지는 [`../templates/problem-page-template.md`](../../templates/problem-page-template.md) 형식.
 - 원본은 **링크로 참조만** 한다. 반드시 [개념](../concepts/README.md)·[오답 패턴](../mistakes/README.md)으로 백링크.
 
